@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{longtable}
+\usepackage{booktabs}
+
+% Define colors for callouts
+\definecolor{notebg}{RGB}{240,248,255}
+\definecolor{tipbg}{RGB}{240,255,240}
+\definecolor{warningbg}{RGB}{255,248,240}
+
+% Define callout environments
+\newtcolorbox{notebox}[1][]{
+    colback=notebg,
+    colframe=blue,
+    fonttitle=\bfseries,
+    title=Note,
+    #1
+}
+
+\newtcolorbox{tipbox}[1][]{
+    colback=tipbg,
+    colframe=green,
+    fonttitle=\bfseries,
+    title=Tip,
+    #1
+}
+
+\newtcolorbox{warningbox}[1][]{
+    colback=warningbg,
+    colframe=red,
+    fonttitle=\bfseries,
+    title=Warning,
+    #1
+}
+
+% Code highlighting
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    captionpos=b,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single,
+    backgroundcolor=\color{gray!10}
+}
+
+% Headers
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\small\bfseries}{\thesubsubsection}{1em}{}
+
+% Math
+\usepackage{amsmath}
+
+\def\tightlist{}
+
+\begin{document}
+
+$body$
+
+\end{document}
